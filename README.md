@@ -1,3 +1,11 @@
+# Japanese OCR Form Processing Application
+
+This project demonstrates building a Japanese OCR form processing application using [spec-kit](https://github.com/github/spec-kit) for vibe coding with Claude Code.
+
+## 1. Setup spec-kit
+
+Follow the spec-kit installation instructions to set up the workflow commands in your Claude Code environment.
+
 ## 2. Establish project principles
 ```
 /speckit.constitution Create principles focused on Japanese OCR accuracy, form structure detection, user privacy, and reliable CSV export quality
