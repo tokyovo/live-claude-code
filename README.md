@@ -1,4 +1,4 @@
-# Multi-Language OCR Form Processor
+# Multi-Language OCR Document Processor
 
 A Next.js application that processes multi-language forms and documents through GPT-5-mini vision API to extract structured data into JSON schema files. Built with TypeScript, Next.js 14, and shadcn/ui.
 
