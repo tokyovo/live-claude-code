@@ -42,112 +42,22 @@ uvx --from git+https://github.com/github/spec-kit.git \
   specify init <PROJECT_NAME>
 ```
 
-**Benefits of persistent installation:**
-- Tool stays installed and available in PATH
-- No need to create shell aliases
-- Better tool management with `uv tool list`, `uv tool upgrade`, `uv tool uninstall`
-- Cleaner shell configuration
-
-### 2. Establish project principles
-
-Launch your AI assistant in the project directory. The `/speckit.*` commands are available in the assistant.
-
-Use the `/speckit.constitution` command to create your project's governing principles and development guidelines that will guide all subsequent development.
+### 2. Run Spec-Kit Workflow
 
 ```
-/speckit.constitution Create principles focused on multi-language OCR accuracy, \
-form structure detection, user privacy, reliable CSV export quality, and \
-accessibility standards
-```
+/speckit.constitution Build with Next.js + Tailwind CSS + shadcn/ui. Prioritise clean, simple, beautiful, and accessible UI/UX. Fully responsive across devices. Keep code minimal, readable, and idiomatic. No tests of any kind (no unit, integration, or end-to-end tests).
 
-### 3. Create the spec
+/speckit.specify Build a simple web app that allows users to upload image files (documents in various languages) and perform OCR using the OpenAI API.
+Use `OPENAI_API_KEY` and model name from `.env.local`.
+The API response must be returned in JSON format following `@output_schema.json`.
+Display results in a two-column layout: left column shows the uploaded image, right column renders the parsed JSON as formatted HTML.
+Provide a button for users to download the JSON output.
 
-Use the `/speckit.specify` command to describe what you want to build. Focus on the **what** and **why**, not the tech stack.
+/speckit.clarify
 
-```
-/speckit.specify Build an application that processes multi-language forms and \
-documents through OCR to extract structured data into CSV files. Users upload \
-images or PDFs containing text in various languages (forms, handwritten notes, \
-business documents), the app detects text regions and form fields, performs \
-accurate multi-language OCR, and exports organized data as CSV with customizable \
-column mappings. Support batch processing and ensure privacy by not storing files \
-on the server.
-```
+/speckit.plan Build with Next.js, Tailwind CSS, and shadcn/ui. Use the OpenAI API to perform OCR parsing on document images. No tests of any kind.
 
-### 4. Create a technical implementation plan
-
-Use the `/speckit.plan` command to provide your tech stack and architecture choices.
-
-```
-/speckit.plan Use Next.js 14 with App Router and TypeScript for the web application. \
-Use shadcn/ui for modern UI components and Tailwind CSS for styling. Implement OCR \
-functionality using OpenAI GPT-4o-mini vision API through Vercel AI SDK. Use React \
-Hook Form with Zod for form validation, Papa Parse for CSV generation, and p-queue \
-for batch processing queue management. Include comprehensive testing with Vitest for \
-unit tests and Playwright for E2E tests. Ensure ≥80% code coverage and WCAG 2.1 AA \
-accessibility compliance.
-```
-
-### 5. Break down into tasks
-
-Use `/speckit.tasks` to create an actionable task list from your implementation plan.
-
-```
 /speckit.tasks
-```
 
-### 6. Execute implementation
-
-Use `/speckit.implement` to execute all tasks and build your feature according to the plan.
-
-```
 /speckit.implement
 ```
-
-## ✨ Features
-
-- 📄 **Multi-Language OCR**: Extract text from images and PDFs in 10+ languages
-- 🎯 **Form Field Detection**: Automatically detect labels, fields, checkboxes, and tables
-- 📊 **CSV Export**: Export structured data with custom column mappings
-- 🚀 **Batch Processing**: Process up to 50 documents simultaneously
-- 🔒 **Privacy-First**: No server-side storage, immediate deletion after export
-- ♿ **Accessible**: WCAG 2.1 AA compliant with full keyboard navigation
-- 📱 **Responsive**: Works on mobile, tablet, and desktop
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js 18.17+ or 20.3+
-- npm, pnpm, or yarn
-- OpenAI API key ([Get one here](https://platform.openai.com/))
-
-### Installation
-
-```bash
-# Clone the repository
-git clone <repository-url>
-cd live-claude-code
-
-# Install dependencies
-npm install
-
-# Copy environment variables
-cp .env.example .env.local
-
-# Add your OpenAI API key to .env.local
-# OPENAI_API_KEY=sk-proj-...
-```
-
-### Development
-
-```bash
-# Start development server
-npm run dev
-
-# Open http://localhost:3000
-```
-
-## 🙏 Credits
-
-Built with [spec-kit](https://github.com/github/spec-kit) workflow and Claude Code.
