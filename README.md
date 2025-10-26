@@ -48,8 +48,8 @@ uvx --from git+https://github.com/github/spec-kit.git \
 /speckit.constitution Build with Next.js + Tailwind CSS + shadcn/ui. Prioritise clean, simple, beautiful, and accessible UI/UX. Fully responsive across devices. Keep code minimal, readable, and idiomatic. No tests of any kind (no unit, integration, or end-to-end tests).
 
 /speckit.specify Build a simple web app that allows users to upload image files (documents in various languages) and perform OCR using the OpenAI API.
-Use `OPENAI_API_KEY` and model name from `.env.local`.
-The API response must be returned in JSON format following `@output_schema.json`.
+Use OPENAI_API_KEY and model name from .env.local.
+The API response must be returned in JSON format following @output_schema.json .
 Display results in a two-column layout: left column shows the uploaded image, right column renders the parsed JSON as formatted HTML.
 Provide a button for users to download the JSON output.
 
